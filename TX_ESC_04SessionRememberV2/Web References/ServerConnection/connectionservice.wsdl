@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.escweb.net/newConnectionService" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://www.escweb.net/newConnectionService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.escweb.net/newConnectionService">
+      <s:element name="ServerInstance">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServerInstanceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ServerInstanceResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Server_x0020_instance_x0020_by_x0020_web_x0020_server">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="webserver" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Server_x0020_instance_x0020_by_x0020_web_x0020_serverResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Server_x0020_instance_x0020_by_x0020_web_x0020_serverResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConnectionStringDefault">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConnectionStringDefaultResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConnectionStringDefaultResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConnectionStringByServer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="webserver" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConnectionStringByServerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConnectionStringByServerResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConnectionStringByServerForReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="webserver" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConnectionStringByServerForReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConnectionStringByServerForReportResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServerName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="webserver" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServerNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ServerNameResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ServerInstanceSoapIn">
+    <wsdl:part name="parameters" element="tns:ServerInstance" />
+  </wsdl:message>
+  <wsdl:message name="ServerInstanceSoapOut">
+    <wsdl:part name="parameters" element="tns:ServerInstanceResponse" />
+  </wsdl:message>
+  <wsdl:message name="Server_x0020_instance_x0020_by_x0020_web_x0020_serverSoapIn">
+    <wsdl:part name="parameters" element="tns:Server_x0020_instance_x0020_by_x0020_web_x0020_server" />
+  </wsdl:message>
+  <wsdl:message name="Server_x0020_instance_x0020_by_x0020_web_x0020_serverSoapOut">
+    <wsdl:part name="parameters" element="tns:Server_x0020_instance_x0020_by_x0020_web_x0020_serverResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConnectionStringDefaultSoapIn">
+    <wsdl:part name="parameters" element="tns:ConnectionStringDefault" />
+  </wsdl:message>
+  <wsdl:message name="ConnectionStringDefaultSoapOut">
+    <wsdl:part name="parameters" element="tns:ConnectionStringDefaultResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConnectionStringByServerSoapIn">
+    <wsdl:part name="parameters" element="tns:ConnectionStringByServer" />
+  </wsdl:message>
+  <wsdl:message name="ConnectionStringByServerSoapOut">
+    <wsdl:part name="parameters" element="tns:ConnectionStringByServerResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConnectionStringByServerForReportSoapIn">
+    <wsdl:part name="parameters" element="tns:ConnectionStringByServerForReport" />
+  </wsdl:message>
+  <wsdl:message name="ConnectionStringByServerForReportSoapOut">
+    <wsdl:part name="parameters" element="tns:ConnectionStringByServerForReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="ServerNameSoapIn">
+    <wsdl:part name="parameters" element="tns:ServerName" />
+  </wsdl:message>
+  <wsdl:message name="ServerNameSoapOut">
+    <wsdl:part name="parameters" element="tns:ServerNameResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ConnectionServiceSoap">
+    <wsdl:operation name="ServerInstance">
+      <wsdl:input message="tns:ServerInstanceSoapIn" />
+      <wsdl:output message="tns:ServerInstanceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServerInstance">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Server instance based on web server</wsdl:documentation>
+      <wsdl:input name="Server_x0020_instance_x0020_by_x0020_web_x0020_server" message="tns:Server_x0020_instance_x0020_by_x0020_web_x0020_serverSoapIn" />
+      <wsdl:output name="Server_x0020_instance_x0020_by_x0020_web_x0020_server" message="tns:Server_x0020_instance_x0020_by_x0020_web_x0020_serverSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConnectionString">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Connection String Default</wsdl:documentation>
+      <wsdl:input name="ConnectionStringDefault" message="tns:ConnectionStringDefaultSoapIn" />
+      <wsdl:output name="ConnectionStringDefault" message="tns:ConnectionStringDefaultSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConnectionString">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Connection String for different server</wsdl:documentation>
+      <wsdl:input name="ConnectionStringByServer" message="tns:ConnectionStringByServerSoapIn" />
+      <wsdl:output name="ConnectionStringByServer" message="tns:ConnectionStringByServerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConnectionStringReport">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Connection String for Report server</wsdl:documentation>
+      <wsdl:input name="ConnectionStringByServerForReport" message="tns:ConnectionStringByServerForReportSoapIn" />
+      <wsdl:output name="ConnectionStringByServerForReport" message="tns:ConnectionStringByServerForReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServerName">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Requesting server</wsdl:documentation>
+      <wsdl:input message="tns:ServerNameSoapIn" />
+      <wsdl:output message="tns:ServerNameSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ConnectionServiceSoap" type="tns:ConnectionServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ServerInstance">
+      <soap:operation soapAction="http://www.escweb.net/newConnectionService/ServerInstance" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServerInstance">
+      <soap:operation soapAction="http://www.escweb.net/newConnectionService/Server instance by web server" style="document" />
+      <wsdl:input name="Server_x0020_instance_x0020_by_x0020_web_x0020_server">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Server_x0020_instance_x0020_by_x0020_web_x0020_server">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConnectionString">
+      <soap:operation soapAction="http://www.escweb.net/newConnectionService/ConnectionStringDefault" style="document" />
+      <wsdl:input name="ConnectionStringDefault">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ConnectionStringDefault">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConnectionString">
+      <soap:operation soapAction="http://www.escweb.net/newConnectionService/ConnectionStringByServer" style="document" />
+      <wsdl:input name="ConnectionStringByServer">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ConnectionStringByServer">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConnectionStringReport">
+      <soap:operation soapAction="http://www.escweb.net/newConnectionService/ConnectionStringByServerForReport" style="document" />
+      <wsdl:input name="ConnectionStringByServerForReport">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ConnectionStringByServerForReport">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServerName">
+      <soap:operation soapAction="http://www.escweb.net/newConnectionService/ServerName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ConnectionServiceSoap12" type="tns:ConnectionServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ServerInstance">
+      <soap12:operation soapAction="http://www.escweb.net/newConnectionService/ServerInstance" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServerInstance">
+      <soap12:operation soapAction="http://www.escweb.net/newConnectionService/Server instance by web server" style="document" />
+      <wsdl:input name="Server_x0020_instance_x0020_by_x0020_web_x0020_server">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Server_x0020_instance_x0020_by_x0020_web_x0020_server">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConnectionString">
+      <soap12:operation soapAction="http://www.escweb.net/newConnectionService/ConnectionStringDefault" style="document" />
+      <wsdl:input name="ConnectionStringDefault">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ConnectionStringDefault">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConnectionString">
+      <soap12:operation soapAction="http://www.escweb.net/newConnectionService/ConnectionStringByServer" style="document" />
+      <wsdl:input name="ConnectionStringByServer">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ConnectionStringByServer">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConnectionStringReport">
+      <soap12:operation soapAction="http://www.escweb.net/newConnectionService/ConnectionStringByServerForReport" style="document" />
+      <wsdl:input name="ConnectionStringByServerForReport">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ConnectionStringByServerForReport">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServerName">
+      <soap12:operation soapAction="http://www.escweb.net/newConnectionService/ServerName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ConnectionService">
+    <wsdl:port name="ConnectionServiceSoap" binding="tns:ConnectionServiceSoap">
+      <soap:address location="http://www.escweb.net/services/connectionprovider/connectionservice.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ConnectionServiceSoap12" binding="tns:ConnectionServiceSoap12">
+      <soap12:address location="http://www.escweb.net/services/connectionprovider/connectionservice.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

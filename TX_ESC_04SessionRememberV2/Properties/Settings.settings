@@ -1,0 +1,9 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="TX_ESC_04SessionRememberV2.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="TX_ESC_04SessionRememberV2_ServerConnection_ConnectionService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://www.escweb.net/services/connectionprovider/connectionservice.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
