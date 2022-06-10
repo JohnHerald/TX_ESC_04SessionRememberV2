@@ -17,7 +17,7 @@ namespace TX_ESC_04SessionRememberV2
         public enum MessageType
         {
             SessionReminder,
-            //SessionremiderToFaci,
+            //SessionremiderToFaci, //VM test Merge 6-10-22
 
 
         }
