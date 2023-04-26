@@ -13,6 +13,7 @@ using System.Diagnostics;
 using System.Web.UI.HtmlControls;
 using System.Web.UI;
 
+
 namespace TX_ESC_04SessionRememberV2
 {
     public class DataProcess
@@ -40,7 +41,7 @@ namespace TX_ESC_04SessionRememberV2
             //DocElement.Load(@"C:\tx_esc_04\tx_esc_04EventCreation.xml");
 
               Constring = ConfigurationManager.AppSettings["DBconnection"];
-            //Constring = ConfigurationManager.AppSettings["DBconnection_DEV"];
+          //  Constring = ConfigurationManager.AppSettings["DBconnection_DEV"];
             //Constring = ConfigurationManager.AppSettings["DBconnection_EUT"];
 
             switch (msgType)
@@ -177,10 +178,26 @@ namespace TX_ESC_04SessionRememberV2
                                                 row.Cells[0].InnerHtml = String.Format(
                                                        "<table> <tr><td valign=\"top\"><b>Dates/Times <br/></b>{0}</td><td valign=\"top\"><div style=\"width: auto; float: left; margin-left: 50px;\"><b>Location </b><br />{1}</div></td></tr></table>"
                                                        , timeDateSummary, locationSummary);
-
+                                               
                                                 table.Rows.Add(row);
+
+                                               
                                             //}
                                         }
+
+                                       
+
+                                        row = new HtmlTableRow();
+                                        row.Cells.Add(new HtmlTableCell());
+                                        row.Cells[0].ColSpan = 2;
+                                        row.Cells[0].InnerHtml = "<div style=\"background-color:#FFFF00;\">Region 4’s McKinney Conference Center is under renovation. Please make note of the session's location listed.</div>";
+
+
+
+                                        row.Cells[0].Style.Add("background-color","yellow");
+                                       // BgColor = "FFFF00";
+                                        table.Rows.Add(row);
+
                                         //row.Cells[0].InnerHtml = String.Format(
                                         //               "<table> <tr><td valign=\"top\"><b>Dates/Times <br/></b>{0}</td><td valign=\"top\"><div style=\"width: auto; float: left; margin-left: 50px;\"><b>Location </b><br />{1}</div></td></tr></table>"
                                         //               , timeDateSummary, locationSummary);
@@ -318,6 +335,7 @@ namespace TX_ESC_04SessionRememberV2
                                         if (Mmsg.To.Count > 0)
                                         {
                                             SmtpMail.Send(Mmsg);
+                                            Mmsg.IsBodyHtml = true;
                                             Mmsg.Dispose();
                                         }
                                         Updatenotifiedfieldforsessionreminder(Convert.ToInt32(dr["attendee_pk"].ToString()));
